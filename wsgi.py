@@ -5,7 +5,7 @@ application = Flask(__name__)
 
 @application.route("/")
 def hello():
-    return np.random.rand()
+    return "{}".format(np.random.rand())
 
 
 if __name__ == "__main__":
