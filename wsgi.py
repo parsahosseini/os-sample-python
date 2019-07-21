@@ -1,3 +1,4 @@
+import json
 import numpy as np
 from flask import Flask
 application = Flask(__name__)
@@ -5,7 +6,7 @@ application = Flask(__name__)
 
 @application.route("/")
 def hello():
-    return "{}".format(np.random.rand())
+    return json.dumps({"number": float(np.random.rand())})
 
 
 if __name__ == "__main__":
